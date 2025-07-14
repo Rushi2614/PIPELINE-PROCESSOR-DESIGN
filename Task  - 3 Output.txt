@@ -1,0 +1,25 @@
+Cycle 1:
+IF Stage: Fetching instruction = 00000110 from addr = 0
+ID Stage: Decoding instruction = xxxxxxxx
+EX Stage: NOP
+WB Stage: Register File Update for Rx =   x
+-------------------------------------------------
+Cycle 2:
+IF Stage: Fetching instruction = 01011100 from addr = 1
+ID Stage: Decoding instruction = 00000110
+EX Stage: NOP
+WB Stage: Register File Update for Rx =   x
+-------------------------------------------------
+Cycle 3:
+IF Stage: Fetching instruction = 10001000 from addr = 2
+ID Stage: Decoding instruction = 01011100
+EX Stage: ADD R0 = R1 + R2 =>   3
+WB Stage: Register File Update for R0 =   0
+-------------------------------------------------
+Cycle 4:
+IF Stage: Fetching instruction = 00000011 from addr = 3
+ID Stage: Decoding instruction = 10001000
+EX Stage: SUB R1 = R3 - R0 =>   0
+WB Stage: Register File Update for R1 =   1
+Simulation complete.
+design.sv:72: $finish called at 35 (1s)
